@@ -23,18 +23,20 @@ export default function MenuSection() {
       ]
     },
     {
-      title: "CHIPS",
-      description: "Golden crispy chips made from premium potatoes, cooked to perfection and served hot.",
+      title: "CHIPS & SIDES",
+      description: "Golden crispy chips made from premium potatoes, cooked to perfection and served hot with traditional accompaniments.",
       subcategories: [
         {
-          name: "Chips Menu",
+          name: "Chips & Sides Menu",
           description: "Our chips and accompaniments",
           isTable: true,
           fishItems: [
             { name: "Chips", medium: "£2.50", large: "£3.50" },
-            { name: "Mushy Peas", medium: "£1.80", large: "-" },
-            { name: "Curry Sauce", medium: "£1.50", large: "-" },
-            { name: "Gravy", medium: "£1.50", large: "-" }
+            { name: "Mushy Peas", medium: "£1.90", large: "-" },
+            { name: "Curry Sauce", medium: "£1.90", large: "-" },
+            { name: "Gravy", medium: "£1.90", large: "-" },
+            { name: "Beans", medium: "£1.90", large: "-" },
+            { name: "Pickled Onions", medium: "£1.00", large: "-" }
           ]
         }
       ]
@@ -53,24 +55,52 @@ export default function MenuSection() {
             { name: "Mixed Doner", medium: "£9.00", large: "-" },
             { name: "Chicken Shish", medium: "£9.50", large: "-" },
             { name: "Lamb Shish", medium: "£10.50", large: "-" },
-            { name: "Mixed Shish", medium: "£11.00", large: "-" }
+            { name: "Mixed Shish", medium: "£11.00", large: "-" },
+            { name: "Lamb Kofte", medium: "£10.50", large: "-" },
+            { name: "Mixed Kebab", medium: "£13.90", large: "-" },
+            { name: "Halloumi Kebab", medium: "£6.90", large: "-" }
           ]
         }
       ]
     },
     {
-      title: "PIES",
-      description: "Homemade traditional British pies with flaky pastry and hearty fillings, baked fresh daily.",
+      title: "PIES & SAUSAGES",
+      description: "Homemade traditional British pies with flaky pastry and hearty fillings, plus premium sausages, all baked fresh daily.",
       subcategories: [
         {
-          name: "Pies Menu",
-          description: "All our homemade pies",
+          name: "Pies & Sausages Menu",
+          description: "Traditional pies and sausages",
           isTable: true,
           fishItems: [
-            { name: "Steak & Kidney Pie", medium: "£4.50", large: "-" },
-            { name: "Chicken & Mushroom Pie", medium: "£4.50", large: "-" },
-            { name: "Beef & Onion Pie", medium: "£4.50", large: "-" },
-            { name: "Cheese & Onion Pie", medium: "£4.00", large: "-" }
+            { name: "Steak & Kidney Pie", medium: "£4.10", large: "-" },
+            { name: "Chicken & Mushroom Pie", medium: "£4.10", large: "-" },
+            { name: "Beef & Onion Pie", medium: "£4.10", large: "-" },
+            { name: "Pancake Roll", medium: "£2.40", large: "-" },
+            { name: "Sausage", medium: "£2.40", large: "-" },
+            { name: "Jumbo Sausage", medium: "£2.40", large: "-" },
+            { name: "Jumbo Saveloy", medium: "£2.40", large: "-" },
+            { name: "Jumbo Battered Sausage", medium: "£2.60", large: "-" }
+          ]
+        }
+      ]
+    },
+    {
+      title: "CHICKEN & BURGERS",
+      description: "Freshly prepared chicken pieces and gourmet burgers made with quality ingredients and served with your choice of sides.",
+      subcategories: [
+        {
+          name: "Chicken & Burgers Menu",
+          description: "Chicken and burger options",
+          isTable: true,
+          fishItems: [
+            { name: "Chicken Quarter", medium: "£4.50", large: "-" },
+            { name: "Chicken Half", medium: "£7.50", large: "-" },
+            { name: "Chicken Nuggets (6pcs)", medium: "£4.50", large: "-" },
+            { name: "Beef Burger", medium: "£4.60", large: "£6.20" },
+            { name: "Cheese Burger", medium: "£4.80", large: "£6.60" },
+            { name: "Chicken Burger", medium: "£4.80", large: "-" },
+            { name: "Chicken Sandwich", medium: "£6.30", large: "-" },
+            { name: "Fish Fillet Burger", medium: "£5.50", large: "-" }
           ]
         }
       ]
