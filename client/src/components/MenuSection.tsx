@@ -63,29 +63,37 @@ export default function MenuSection() {
     { name: "Tea/Coffee", price: "£1.80", description: "Hot drinks" }
   ];
 
-  const MenuItem = ({ item }: { item: any }) => (
-    <div className="flex justify-between items-center py-3 border-b border-gray-200 last:border-b-0">
-      <div className="flex-1">
-        <h4 className="font-semibold text-white">
+  const BubbleMenuItem = ({ item }: { item: any }) => (
+    <div className="relative group">
+      <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 p-6 min-h-[160px] flex flex-col justify-center items-center text-center border-4 border-golden">
+        <h4 className="font-bold text-white text-lg mb-2 leading-tight">
           {item.name}
-          {item.size && <span className="text-sm text-white ml-2">({item.size})</span>}
         </h4>
-        {item.description && (
-          <p className="text-sm text-white mt-1">{item.description}</p>
+        {item.size && (
+          <div className="bg-golden text-blue-900 text-xs font-semibold px-3 py-1 rounded-full mb-2">
+            {item.size}
+          </div>
         )}
+        {item.description && (
+          <p className="text-blue-100 text-sm mb-3 leading-snug">{item.description}</p>
+        )}
+        <div className="bg-white text-blue-900 font-bold text-lg px-4 py-1 rounded-full shadow-md">
+          {item.price}
+        </div>
       </div>
-      <span className="text-lg font-bold text-white ml-4">{item.price}</span>
     </div>
   );
 
   const MenuCategory = ({ title, items }: { title: string; items: any[] }) => (
-    <div className="bg-black rounded-xl shadow-lg p-6 mb-8">
-      <h3 className="text-2xl font-bold text-white mb-6 text-center border-b-2 border-golden pb-3">
-        {title}
+    <div className="mb-12">
+      <h3 className="text-3xl font-bold text-white mb-8 text-center">
+        <span className="bg-gradient-to-r from-golden to-yellow-400 bg-clip-text text-transparent">
+          {title}
+        </span>
       </h3>
-      <div className="space-y-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {items.map((item, index) => (
-          <MenuItem key={index} item={item} />
+          <BubbleMenuItem key={index} item={item} />
         ))}
       </div>
     </div>
@@ -94,25 +102,19 @@ export default function MenuSection() {
   return (
     <section id="menu" className="py-16 bg-ocean-blue">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">Our Menu</h2>
-          <p className="text-xl text-white max-w-2xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold text-white mb-6">Our Menu</h2>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Fresh ingredients, traditional recipes, and generous portions - everything you love about great British takeaway food
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
-          <div>
-            <MenuCategory title="Fish & Chips" items={fishChipsItems} />
-            <MenuCategory title="Kebabs" items={kebabItems} />
-            <MenuCategory title="Burgers" items={burgerItems} />
-          </div>
-          <div>
-            <MenuCategory title="Homemade Pies" items={pieItems} />
-            <MenuCategory title="Sides & Extras" items={sidesItems} />
-            <MenuCategory title="Drinks" items={drinkItems} />
-          </div>
-        </div>
+        <MenuCategory title="Fish & Chips" items={fishChipsItems} />
+        <MenuCategory title="Kebabs" items={kebabItems} />
+        <MenuCategory title="Homemade Pies" items={pieItems} />
+        <MenuCategory title="Burgers" items={burgerItems} />
+        <MenuCategory title="Sides & Extras" items={sidesItems} />
+        <MenuCategory title="Drinks" items={drinkItems} />
       </div>
     </section>
   );
