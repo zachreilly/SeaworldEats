@@ -9,9 +9,9 @@ export default function MenuSection() {
           description: "All our fresh fish options",
           isTable: true,
           fishItems: [
-            { name: "Cod", medium: "£6.50", large: "£8.50" },
-            { name: "Haddock", medium: "£6.50", large: "£8.50" },
-            { name: "Plaice", medium: "£5.50", large: "£7.50" },
+            { name: "Cod", medium: "£8.60", large: "£9.90" },
+            { name: "Haddock", medium: "-", large: "£9.90" },
+            { name: "Plaice", medium: "-", large: "£9.90" },
             { name: "Rock", medium: "£8.60", large: "-" },
             { name: "OAP", medium: "£8.50", large: "-" },
             { name: "Scampi (10 pieces)", medium: "£8.40", large: "-" },
