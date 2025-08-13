@@ -238,35 +238,18 @@ export default function MenuSection() {
             {subcategory.name}
           </h4>
           <div className="bg-white/10 rounded-xl p-6">
-            {hasLargeSizes ? (
-              <>
-                <div className="grid grid-cols-3 gap-4 mb-4">
-                  <div className="font-bold text-golden text-center">Item</div>
-                  <div className="font-bold text-golden text-center">Medium</div>
-                  <div className="font-bold text-golden text-center">Large</div>
-                </div>
-                {subcategory.fishItems.map((fish: any, index: number) => (
-                  <div key={index} className="grid grid-cols-3 gap-4 py-2 border-b border-white/20 last:border-b-0">
-                    <div className="text-white text-sm font-medium">{fish.name}</div>
-                    <div className="text-white text-sm text-center">{fish.medium}</div>
-                    <div className="text-white text-sm text-center">{fish.large}</div>
-                  </div>
-                ))}
-              </>
-            ) : (
-              <>
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  <div className="font-bold text-golden text-center">Item</div>
-                  <div className="font-bold text-golden text-center">Price</div>
-                </div>
-                {subcategory.fishItems.map((fish: any, index: number) => (
-                  <div key={index} className="grid grid-cols-2 gap-4 py-2 border-b border-white/20 last:border-b-0">
-                    <div className="text-white text-sm font-medium">{fish.name}</div>
-                    <div className="text-white text-sm text-center">{fish.medium}</div>
-                  </div>
-                ))}
-              </>
-            )}
+            <div className={`grid ${hasLargeSizes ? 'grid-cols-3' : 'grid-cols-2'} gap-4 mb-4`}>
+              <div className="font-bold text-golden text-center">Item</div>
+              <div className="font-bold text-golden text-center">{hasLargeSizes ? 'Medium' : 'Price'}</div>
+              {hasLargeSizes && <div className="font-bold text-golden text-center">Large</div>}
+            </div>
+            {subcategory.fishItems.map((fish: any, index: number) => (
+              <div key={index} className={`grid ${hasLargeSizes ? 'grid-cols-3' : 'grid-cols-2'} gap-4 py-2 border-b border-white/20 last:border-b-0`}>
+                <div className="text-white text-sm font-medium">{fish.name}</div>
+                <div className="text-white text-sm text-center">{fish.medium}</div>
+                {hasLargeSizes && <div className="text-white text-sm text-center">{fish.large}</div>}
+              </div>
+            ))}
           </div>
           {subcategory.isSeniors && (
             <div className="mt-4 text-center">
