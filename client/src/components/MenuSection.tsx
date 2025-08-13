@@ -27,6 +27,13 @@ export default function MenuSection() {
             { size: "Large", price: "£7.50" },
             { size: "Regular", price: "£5.50" }
           ]
+        },
+        {
+          name: "Rock",
+          description: "Fresh rock fish", 
+          options: [
+            { size: "Large", price: "£8.60" }
+          ]
         }
       ]
     },
@@ -145,7 +152,7 @@ export default function MenuSection() {
   );
 
   return (
-    <section id="menu" className="py-16 bg-ocean-blue">
+    <section id="menu" className="py-16 bg-ocean-blue fish-chips-pattern">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-6">Our Menu</h2>
