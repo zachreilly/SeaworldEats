@@ -30,13 +30,16 @@ export default function MenuSection() {
           name: "Chips & Sides Menu",
           description: "Our chips and accompaniments",
           isTable: true,
+          isChips: true,
           fishItems: [
             { name: "Chips", medium: "£2.50", large: "£3.50" },
             { name: "Mushy Peas", medium: "£1.90", large: "-" },
             { name: "Curry Sauce", medium: "£1.90", large: "-" },
             { name: "Gravy", medium: "£1.90", large: "-" },
             { name: "Beans", medium: "£1.90", large: "-" },
-            { name: "Pickled Onions", medium: "£1.00", large: "-" }
+            { name: "Pickled Onions", medium: "£1.00", large: "-" },
+            { name: "Buttered Roll", medium: "£0.90", large: "-" },
+            { name: "Hummus", medium: "£1.90", large: "-" }
           ]
         }
       ]
@@ -58,7 +61,10 @@ export default function MenuSection() {
             { name: "Mixed Shish", medium: "£11.00", large: "-" },
             { name: "Lamb Kofte", medium: "£10.50", large: "-" },
             { name: "Mixed Kebab", medium: "£13.90", large: "-" },
-            { name: "Halloumi Kebab", medium: "£6.90", large: "-" }
+            { name: "Halloumi Kebab", medium: "£6.90", large: "-" },
+            { name: "Hummus in Pitta", medium: "£5.30", large: "-" },
+            { name: "Salad in Pitta Bread", medium: "£4.30", large: "-" },
+            { name: "Chips in Pitta Bread", medium: "£4.00", large: "-" }
           ]
         }
       ]
@@ -100,7 +106,72 @@ export default function MenuSection() {
             { name: "Cheese Burger", medium: "£4.80", large: "£6.60" },
             { name: "Chicken Burger", medium: "£4.80", large: "-" },
             { name: "Chicken Sandwich", medium: "£6.30", large: "-" },
-            { name: "Fish Fillet Burger", medium: "£5.50", large: "-" }
+            { name: "Fish Fillet Burger", medium: "£5.50", large: "-" },
+            { name: "Vegetarian Burger", medium: "£4.80", large: "-" }
+          ]
+        }
+      ]
+    },
+    {
+      title: "SIDES & EXTRAS",
+      description: "Delicious side orders and extras to complement your meal, including crispy appetizers and fresh vegetables.",
+      subcategories: [
+        {
+          name: "Sides & Extras Menu",
+          description: "Additional sides and extras",
+          isTable: true,
+          fishItems: [
+            { name: "Breaded Mushrooms (10pcs)", medium: "£4.00", large: "-" },
+            { name: "Mozzarella Sticks (6pcs)", medium: "£4.50", large: "-" },
+            { name: "Fish Fingers (6pcs)", medium: "£4.00", large: "-" },
+            { name: "Calamari Rings (6pcs)", medium: "£5.50", large: "-" },
+            { name: "Halloumi Fries (4pcs)", medium: "£4.50", large: "-" },
+            { name: "Pineapple Fritter (4pcs)", medium: "£3.50", large: "-" },
+            { name: "Onion Rings (8pcs)", medium: "£3.50", large: "-" }
+          ]
+        }
+      ]
+    },
+    {
+      title: "WRAPS & KIDS MEALS",
+      description: "Fresh wraps with tender meats and crispy vegetables, plus specially portioned kids meals with their favorite items.",
+      subcategories: [
+        {
+          name: "Wraps & Kids Menu",
+          description: "Wraps and kids meal options",
+          isTable: true,
+          fishItems: [
+            { name: "Doner Kebab Wrap", medium: "£8.20", large: "-" },
+            { name: "Lamb Kofte Wrap", medium: "£9.20", large: "-" },
+            { name: "Lamb Shish Wrap", medium: "£9.20", large: "-" },
+            { name: "Chicken Shish Wrap", medium: "£9.20", large: "-" },
+            { name: "Falafel Wrap", medium: "£6.90", large: "-" },
+            { name: "Halloumi Wrap", medium: "£6.90", large: "-" },
+            { name: "Fishcake & Chips", medium: "£5.00", large: "-" },
+            { name: "Chicken Nugget & Chips (4pcs)", medium: "£5.00", large: "-" },
+            { name: "Sausage & Chips", medium: "£5.00", large: "-" },
+            { name: "Fish Fingers & Chips (3pcs)", medium: "£5.00", large: "-" },
+            { name: "Battered Sausage & Chips", medium: "£5.00", large: "-" }
+          ]
+        }
+      ]
+    },
+    {
+      title: "DRINKS & CONDIMENTS",
+      description: "Refreshing drinks to complement your meal and essential condiments to enhance your dining experience.",
+      subcategories: [
+        {
+          name: "Drinks & Condiments Menu",
+          description: "Beverages and condiments",
+          isTable: true,
+          fishItems: [
+            { name: "Can Drinks", medium: "£1.30", large: "-" },
+            { name: "Water", medium: "£1.00", large: "-" },
+            { name: "Ribena", medium: "£1.30", large: "-" },
+            { name: "Fruit Shoot", medium: "£1.00", large: "-" },
+            { name: "Big Bottle Drinks", medium: "£2.50", large: "-" },
+            { name: "Bottle Ketchup", medium: "£2.20", large: "-" },
+            { name: "Bottle Vinegar", medium: "£2.20", large: "-" }
           ]
         }
       ]
@@ -110,7 +181,23 @@ export default function MenuSection() {
   const SubcategoryBubble = ({ subcategory }: { subcategory: any }) => {
     if (subcategory.isTable) {
       return (
-        <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl shadow-lg p-8 border-4 border-golden">
+        <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl shadow-lg p-8 border-4 border-golden relative overflow-hidden">
+          {subcategory.isChips && (
+            <div className="absolute top-4 right-4 opacity-20">
+              <svg width="60" height="80" viewBox="0 0 60 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Chip pot/container */}
+                <path d="M10 20 L50 20 L48 75 L12 75 Z" fill="currentColor" stroke="currentColor" strokeWidth="2"/>
+                <ellipse cx="30" cy="20" rx="20" ry="3" fill="currentColor"/>
+                {/* Individual chips */}
+                <rect x="15" y="25" width="3" height="12" fill="#FFD700" transform="rotate(5 16.5 31)"/>
+                <rect x="20" y="30" width="3" height="15" fill="#FFD700" transform="rotate(-10 21.5 37.5)"/>
+                <rect x="25" y="28" width="3" height="13" fill="#FFD700" transform="rotate(15 26.5 34.5)"/>
+                <rect x="30" y="32" width="3" height="14" fill="#FFD700" transform="rotate(-5 31.5 39)"/>
+                <rect x="35" y="26" width="3" height="16" fill="#FFD700" transform="rotate(8 36.5 34)"/>
+                <rect x="40" y="29" width="3" height="12" fill="#FFD700" transform="rotate(-12 41.5 35)"/>
+              </svg>
+            </div>
+          )}
           <h4 className="font-bold text-white text-2xl mb-6 text-center">
             {subcategory.name}
           </h4>
@@ -177,8 +264,8 @@ export default function MenuSection() {
   );
 
   return (
-    <section id="menu" className="py-16 bg-ocean-blue fish-chips-pattern">
-      <div className="container mx-auto px-4">
+    <section id="menu" className="py-16 bg-ocean-blue fish-pattern relative">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-6">Our Menu</h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
