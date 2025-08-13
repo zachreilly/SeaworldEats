@@ -1,11 +1,11 @@
 export default function MenuSection() {
   // Fish & Chips Menu
   const fishChipsItems = [
-    { name: "Cod", price: "£8.50", size: "Regular" },
-    { name: "Haddock", price: "£7.95", size: "Regular" },
+    { name: "Cod", price: "£8.50", size: "Large" },
+    { name: "Haddock", price: "£7.95", size: "Large" },
     { name: "Plaice & Chips", price: "£7.50", size: "Regular" },
-    { name: "Cod", price: "£6.50", size: "Small" },
-    { name: "Haddock", price: "£5.95", size: "Small" },
+    { name: "Cod", price: "£6.50", size: "Regular" },
+    { name: "Haddock", price: "£5.95", size: "Regular" },
     { name: "Large Chips", price: "£2.50", size: "" },
     { name: "Chips", price: "£1.80", size: "" },
     { name: "Mushy Peas", price: "£1.20", size: "" },
