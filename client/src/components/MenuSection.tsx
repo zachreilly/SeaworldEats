@@ -1,6 +1,23 @@
 export default function MenuSection() {
   const menuCategories = [
     {
+      title: "SENIORS FISH & CHIPS MEAL",
+      description: "Special discounted meals for our senior customers, featuring smaller portions at great value prices.",
+      subcategories: [
+        {
+          name: "Seniors Menu",
+          description: "Available Monday to Saturday 11:30 to 15:30",
+          isTable: true,
+          isSeniors: true,
+          fishItems: [
+            { name: "Senior Cod & Chips", medium: "£6.50", large: "-" },
+            { name: "Senior Haddock & Chips", medium: "£6.50", large: "-" },
+            { name: "Senior Plaice & Chips", medium: "£6.50", large: "-" }
+          ]
+        }
+      ]
+    },
+    {
       title: "FISH",
       description: "Fresh fish fillets in our signature crispy batter, served with your choice of chips and traditional sides.",
       subcategories: [
