@@ -54,8 +54,8 @@
   /* Restaurant theme colors */
   --ocean-blue: hsl(221 84.5% 40.2%);
   --golden: hsl(42.1 91.8% 48.6%);
-  --light-blue: hsl(214 100% 97.1%);
-  --warm-white: hsl(0 0% 98%);
+  --light-blue: hsl(221 84.5% 45%);
+  --warm-white: hsl(0 0% 100%);
 }
 
 .dark {
@@ -117,7 +117,7 @@
   }
 
   body {
-    @apply font-sans antialiased bg-warm-white text-foreground;
+    @apply font-sans antialiased bg-ocean-blue text-white;
   }
 
   .ocean-blue {

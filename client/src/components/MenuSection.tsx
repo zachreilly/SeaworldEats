@@ -66,21 +66,21 @@ export default function MenuSection() {
   const MenuItem = ({ item }: { item: any }) => (
     <div className="flex justify-between items-center py-3 border-b border-gray-200 last:border-b-0">
       <div className="flex-1">
-        <h4 className="font-semibold text-gray-800">
+        <h4 className="font-semibold text-white">
           {item.name}
           {item.size && <span className="text-sm text-gray-500 ml-2">({item.size})</span>}
         </h4>
         {item.description && (
-          <p className="text-sm text-gray-600 mt-1">{item.description}</p>
+          <p className="text-sm text-gray-300 mt-1">{item.description}</p>
         )}
       </div>
-      <span className="text-lg font-bold text-ocean-blue ml-4">{item.price}</span>
+      <span className="text-lg font-bold text-white ml-4">{item.price}</span>
     </div>
   );
 
   const MenuCategory = ({ title, items }: { title: string; items: any[] }) => (
-    <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
-      <h3 className="text-2xl font-bold text-ocean-blue mb-6 text-center border-b-2 border-golden pb-3">
+    <div className="bg-light-blue rounded-xl shadow-lg p-6 mb-8">
+      <h3 className="text-2xl font-bold text-white mb-6 text-center border-b-2 border-golden pb-3">
         {title}
       </h3>
       <div className="space-y-2">
@@ -92,11 +92,11 @@ export default function MenuSection() {
   );
 
   return (
-    <section id="menu" className="py-16 bg-light-blue">
+    <section id="menu" className="py-16 bg-ocean-blue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Menu</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl font-bold text-white mb-4">Our Menu</h2>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Fresh ingredients, traditional recipes, and generous portions - everything you love about great British takeaway food
           </p>
         </div>

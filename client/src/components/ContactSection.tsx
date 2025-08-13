@@ -11,14 +11,14 @@ export default function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Info and Map */}
           <div className="space-y-8">
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6">Visit Our Restaurant</h3>
+            <div className="bg-light-blue rounded-xl shadow-lg p-8">
+              <h3 className="text-2xl font-semibold text-white mb-6">Visit Our Restaurant</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <i className="fas fa-map-marker-alt text-ocean-blue text-xl mt-1"></i>
+                  <i className="fas fa-map-marker-alt text-white text-xl mt-1"></i>
                   <div>
-                    <div className="font-semibold text-gray-800">Address</div>
-                    <div className="text-gray-600">152 Watford Rd, Croxley Green, WD3 3BZ</div>
+                    <div className="font-semibold text-white">Address</div>
+                    <div className="text-gray-300">152 Watford Rd, Croxley Green, WD3 3BZ</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
