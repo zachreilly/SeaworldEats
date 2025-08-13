@@ -1,123 +1,14 @@
-import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { insertContactInquirySchema } from "@shared/schema";
-import type { InsertContactInquiry } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-
 export default function ContactSection() {
-  const { toast } = useToast();
-  
-  const form = useForm<InsertContactInquiry>({
-    resolver: zodResolver(insertContactInquirySchema),
-    defaultValues: {
-      name: "",
-      phone: "",
-      message: "",
-    },
-  });
-
-  const contactMutation = useMutation({
-    mutationFn: async (data: InsertContactInquiry) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for contacting us. We'll get back to you soon.",
-      });
-      form.reset();
-    },
-    onError: (error: any) => {
-      toast({
-        title: "Error",
-        description: error.message || "Failed to send message. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
-
-  const onSubmit = (data: InsertContactInquiry) => {
-    contactMutation.mutate(data);
-  };
 
   return (
     <section id="contact" className="py-16 bg-light-blue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Contact Us</h2>
-          <p className="text-xl text-gray-600">Get in touch for orders, inquiries, or feedback</p>
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">Find Us</h2>
+          <p className="text-xl text-gray-600">Visit us for the best fish & chips in Croxley Green</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6">Send us a Message</h3>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              <div>
-                <Label htmlFor="name" className="block text-gray-700 font-medium mb-2">
-                  Your Name
-                </Label>
-                <Input
-                  id="name"
-                  {...form.register("name")}
-                  placeholder="Enter your name"
-                  className="w-full"
-                />
-                {form.formState.errors.name && (
-                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.name.message}</p>
-                )}
-              </div>
-              
-              <div>
-                <Label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
-                  Phone Number
-                </Label>
-                <Input
-                  id="phone"
-                  type="tel"
-                  {...form.register("phone")}
-                  placeholder="Your phone number"
-                  className="w-full"
-                />
-                {form.formState.errors.phone && (
-                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.phone.message}</p>
-                )}
-              </div>
-              
-              <div>
-                <Label htmlFor="message" className="block text-gray-700 font-medium mb-2">
-                  Message
-                </Label>
-                <Textarea
-                  id="message"
-                  rows={4}
-                  {...form.register("message")}
-                  placeholder="How can we help you?"
-                  className="w-full"
-                />
-                {form.formState.errors.message && (
-                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.message.message}</p>
-                )}
-              </div>
-              
-              <Button
-                type="submit"
-                disabled={contactMutation.isPending}
-                className="w-full bg-ocean-blue hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-              >
-                {contactMutation.isPending ? "Sending..." : "Send Message"}
-              </Button>
-            </form>
-          </div>
-
           {/* Contact Info and Map */}
           <div className="space-y-8">
             <div className="bg-white rounded-xl shadow-lg p-8">
