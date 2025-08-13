@@ -4,10 +4,10 @@ export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const images = [
-    "/attached_assets/IMG_3358_1755094850358.jpeg",
-    "/attached_assets/IMG_3359_1755094850358.jpeg", 
-    "/attached_assets/IMG_3360_1755094850358.jpeg",
-    "/attached_assets/IMG_3361_1755094850358.jpeg"
+    "/IMG_3358_1755094850358.jpeg",
+    "/IMG_3359_1755094850358.jpeg", 
+    "/IMG_3360_1755094850358.jpeg",
+    "/IMG_3361_1755094850358.jpeg"
   ];
 
   useEffect(() => {
