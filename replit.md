@@ -37,6 +37,8 @@ Preferred communication style: Simple, everyday language.
 ## Build & Deployment
 - **Development**: Vite dev server with Express backend integration
 - **Production**: Static frontend build with bundled backend using esbuild
+- **Deployment Build**: Custom build script (`build-for-deployment.js`) that restructures files for static deployment
+- **File Structure**: Vite outputs to `dist/public`, deployment script moves files to `dist` for compatibility
 - **TypeScript**: Strict configuration with path mapping for clean imports
 - **Asset Management**: Vite handles static assets with proper optimization
 
