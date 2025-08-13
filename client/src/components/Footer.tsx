@@ -77,7 +77,17 @@ export default function Footer() {
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 Seaworld Fish Bar. All rights reserved.</p>
-          <p className="mt-2 text-sm">Made by wrwebsites.com</p>
+          <p className="mt-2 text-sm">
+            Made by{" "}
+            <a 
+              href="https://wrwebsites.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-golden hover:text-yellow-400 underline transition-colors"
+            >
+              wrwebsites.com
+            </a>
+          </p>
         </div>
       </div>
     </footer>
