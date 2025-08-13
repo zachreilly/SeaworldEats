@@ -6,8 +6,7 @@ export default function Hero() {
   const images = [
     "/IMG_3358_1755094850358.jpeg",
     "/IMG_3359_1755094850358.jpeg", 
-    "/IMG_3360_1755094850358.jpeg",
-    "/IMG_3361_1755094850358.jpeg"
+    "/IMG_3360_1755094850358.jpeg"
   ];
 
   useEffect(() => {
