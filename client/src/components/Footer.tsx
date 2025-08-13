@@ -18,13 +18,8 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-ocean-blue rounded-full flex items-center justify-center">
-                <i className="fas fa-fish text-white"></i>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">Seaworld Fish Bar</h3>
-              </div>
+            <div className="mb-4">
+              <h3 className="text-xl font-bold">Seaworld Fish Bar</h3>
             </div>
             <p className="text-gray-300 mb-4">
               Serving the finest fish & chips, kebabs and homemade pies in Croxley Green since day one.

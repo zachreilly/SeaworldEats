@@ -42,14 +42,9 @@ export default function Header() {
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-ocean-blue rounded-full flex items-center justify-center">
-              <i className="fas fa-fish text-white text-xl"></i>
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-ocean-blue">Seaworld Fish Bar</h1>
-              <p className="text-sm text-gray-600">Fresh Fish & Chips • Kebabs • Pies</p>
-            </div>
+          <div>
+            <h1 className="text-2xl font-bold text-ocean-blue">Seaworld Fish Bar</h1>
+            <p className="text-sm text-gray-600">Fresh Fish & Chips • Kebabs • Pies</p>
           </div>
           
           {!isMobile && (
