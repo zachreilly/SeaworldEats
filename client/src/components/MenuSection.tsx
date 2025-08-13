@@ -5,14 +5,18 @@ export default function MenuSection() {
       description: "Special discounted meals for our senior customers, featuring smaller portions at great value prices.",
       subcategories: [
         {
-          name: "Seniors Menu",
-          description: "Available Monday to Saturday 11:30 to 15:30",
+          name: "Lunch Meal Deals",
+          description: "All meals include curry sauce or mushy peas & cans",
           isTable: true,
           isSeniors: true,
           fishItems: [
-            { name: "Senior Cod & Chips", medium: "£6.50", large: "-" },
-            { name: "Senior Haddock & Chips", medium: "£6.50", large: "-" },
-            { name: "Senior Plaice & Chips", medium: "£6.50", large: "-" }
+            { name: "Cod & Chips", medium: "£9.50", large: "-" },
+            { name: "Sausage & Chips", medium: "£8.00", large: "-" },
+            { name: "Fish Cake & Chips", medium: "£6.50", large: "-" },
+            { name: "Chicken Nugget (8 pcs) & Chips", medium: "£8.00", large: "-" },
+            { name: "Quarter Chicken & Chips", medium: "£8.00", large: "-" },
+            { name: "Cheesy Chips", medium: "£6.50", large: "-" },
+            { name: "Fish Fingers (6 pcs) & Chips", medium: "£7.00", large: "-" }
           ]
         }
       ]
@@ -215,6 +219,18 @@ export default function MenuSection() {
               </svg>
             </div>
           )}
+          {subcategory.isSeniors && (
+            <div className="absolute top-4 right-4 opacity-20">
+              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Clock icon for time-limited offers */}
+                <circle cx="30" cy="30" r="25" fill="currentColor" stroke="currentColor" strokeWidth="2"/>
+                <circle cx="30" cy="30" r="20" fill="none" stroke="#FFD700" strokeWidth="2"/>
+                <line x1="30" y1="30" x2="30" y2="18" stroke="#FFD700" strokeWidth="3"/>
+                <line x1="30" y1="30" x2="38" y2="30" stroke="#FFD700" strokeWidth="2"/>
+                <circle cx="30" cy="30" r="2" fill="#FFD700"/>
+              </svg>
+            </div>
+          )}
           <h4 className="font-bold text-white text-2xl mb-6 text-center">
             {subcategory.name}
           </h4>
@@ -232,6 +248,15 @@ export default function MenuSection() {
               </div>
             ))}
           </div>
+          {subcategory.isSeniors && (
+            <div className="mt-4 text-center">
+              <div className="bg-golden/20 rounded-lg p-3 border border-golden/30">
+                <p className="text-golden font-bold text-sm">
+                  Monday to Saturday 11:30 to 15:30
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       );
     }
