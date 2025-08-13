@@ -44,7 +44,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           <div>
             <h1 className="text-2xl font-bold text-white">Seaworld Fish Bar</h1>
-            <p className="text-sm text-black">Fresh Fish & Chips • Kebabs • Pies</p>
+            <p className="text-sm text-white">Fresh Fish & Chips • Kebabs • Pies</p>
           </div>
           
           {!isMobile && (
@@ -54,14 +54,14 @@ export default function Header() {
                   <i className="fas fa-phone mr-2"></i>
                   <span>01923 710019</span>
                 </button>
-                <div className="text-sm text-black">Call for takeaway orders</div>
+                <div className="text-sm text-white">Call for takeaway orders</div>
               </div>
               <div className="text-right">
                 <div className={`flex items-center font-semibold ${isOpenNow ? 'text-green-600' : 'text-red-600'}`}>
                   <i className="fas fa-clock mr-2"></i>
                   <span>{isOpenNow ? 'Open Now' : 'Closed'}</span>
                 </div>
-                <div className="text-sm text-black">
+                <div className="text-sm text-white">
                   {isOpenNow ? `Until ${closingTime}` : 'See opening hours'}
                 </div>
               </div>
@@ -88,7 +88,7 @@ export default function Header() {
                 <button onClick={handleCall} className="text-white font-semibold text-lg hover:text-gray-200 transition-colors">
                   01923 710019
                 </button>
-                <div className="text-sm text-black">Call for takeaway orders</div>
+                <div className="text-sm text-white">Call for takeaway orders</div>
               </div>
               <div className="text-center">
                 <div className={`font-semibold ${isOpenNow ? 'text-green-600' : 'text-red-600'}`}>

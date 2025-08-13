@@ -68,10 +68,10 @@ export default function MenuSection() {
       <div className="flex-1">
         <h4 className="font-semibold text-white">
           {item.name}
-          {item.size && <span className="text-sm text-black ml-2">({item.size})</span>}
+          {item.size && <span className="text-sm text-white ml-2">({item.size})</span>}
         </h4>
         {item.description && (
-          <p className="text-sm text-black mt-1">{item.description}</p>
+          <p className="text-sm text-white mt-1">{item.description}</p>
         )}
       </div>
       <span className="text-lg font-bold text-white ml-4">{item.price}</span>
@@ -79,7 +79,7 @@ export default function MenuSection() {
   );
 
   const MenuCategory = ({ title, items }: { title: string; items: any[] }) => (
-    <div className="bg-light-blue rounded-xl shadow-lg p-6 mb-8">
+    <div className="bg-black rounded-xl shadow-lg p-6 mb-8">
       <h3 className="text-2xl font-bold text-white mb-6 text-center border-b-2 border-golden pb-3">
         {title}
       </h3>
@@ -96,7 +96,7 @@ export default function MenuSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">Our Menu</h2>
-          <p className="text-xl text-black max-w-2xl mx-auto">
+          <p className="text-xl text-white max-w-2xl mx-auto">
             Fresh ingredients, traditional recipes, and generous portions - everything you love about great British takeaway food
           </p>
         </div>

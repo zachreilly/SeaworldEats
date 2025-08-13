@@ -5,27 +5,27 @@ export default function ContactSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">Find Us</h2>
-          <p className="text-xl text-black">Visit us for the best fish & chips in Croxley Green</p>
+          <p className="text-xl text-white">Visit us for the best fish & chips in Croxley Green</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Info and Map */}
           <div className="space-y-8">
-            <div className="bg-light-blue rounded-xl shadow-lg p-8">
+            <div className="bg-black rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-semibold text-white mb-6">Visit Our Restaurant</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <i className="fas fa-map-marker-alt text-white text-xl mt-1"></i>
                   <div>
                     <div className="font-semibold text-white">Address</div>
-                    <div className="text-black">152 Watford Rd, Croxley Green, WD3 3BZ</div>
+                    <div className="text-white">152 Watford Rd, Croxley Green, WD3 3BZ</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <i className="fas fa-phone text-ocean-blue text-xl mt-1"></i>
                   <div>
                     <div className="font-semibold text-white">Phone</div>
-                    <div className="text-black">01923 710019</div>
+                    <div className="text-white">01923 710019</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
