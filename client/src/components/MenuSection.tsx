@@ -27,20 +27,14 @@ export default function MenuSection() {
       description: "Golden crispy chips made from premium potatoes, cooked to perfection and served hot.",
       subcategories: [
         {
-          name: "Traditional Chips",
-          description: "Our signature golden chips",
-          options: [
-            { size: "Large", price: "£3.50" },
-            { size: "Regular", price: "£2.50" }
-          ]
-        },
-        {
-          name: "Chip Extras",
-          description: "Perfect accompaniments",
-          options: [
-            { size: "Mushy Peas", price: "£1.80" },
-            { size: "Curry Sauce", price: "£1.50" },
-            { size: "Gravy", price: "£1.50" }
+          name: "Chips Menu",
+          description: "Our chips and accompaniments",
+          isTable: true,
+          fishItems: [
+            { name: "Chips", medium: "£2.50", large: "£3.50" },
+            { name: "Mushy Peas", medium: "£1.80", large: "-" },
+            { name: "Curry Sauce", medium: "£1.50", large: "-" },
+            { name: "Gravy", medium: "£1.50", large: "-" }
           ]
         }
       ]
@@ -50,21 +44,16 @@ export default function MenuSection() {
       description: "Authentic Mediterranean flavors with tender meats and fresh ingredients, served in warm pita or with chips.",
       subcategories: [
         {
-          name: "Doner Kebabs",
-          description: "Traditional doner meat",
-          options: [
-            { size: "Chicken", price: "£8.50" },
-            { size: "Lamb", price: "£8.50" },
-            { size: "Mixed", price: "£9.00" }
-          ]
-        },
-        {
-          name: "Shish Kebabs", 
-          description: "Grilled meat pieces",
-          options: [
-            { size: "Chicken", price: "£9.50" },
-            { size: "Lamb", price: "£10.50" },
-            { size: "Mixed", price: "£11.00" }
+          name: "Kebabs Menu",
+          description: "All our kebab options",
+          isTable: true,
+          fishItems: [
+            { name: "Chicken Doner", medium: "£8.50", large: "-" },
+            { name: "Lamb Doner", medium: "£8.50", large: "-" },
+            { name: "Mixed Doner", medium: "£9.00", large: "-" },
+            { name: "Chicken Shish", medium: "£9.50", large: "-" },
+            { name: "Lamb Shish", medium: "£10.50", large: "-" },
+            { name: "Mixed Shish", medium: "£11.00", large: "-" }
           ]
         }
       ]
@@ -74,19 +63,14 @@ export default function MenuSection() {
       description: "Homemade traditional British pies with flaky pastry and hearty fillings, baked fresh daily.",
       subcategories: [
         {
-          name: "Meat Pies",
-          description: "Traditional savory pies",
-          options: [
-            { size: "Steak & Kidney", price: "£4.50" },
-            { size: "Chicken & Mushroom", price: "£4.50" },
-            { size: "Beef & Onion", price: "£4.50" }
-          ]
-        },
-        {
-          name: "Vegetarian",
-          description: "Meat-free options", 
-          options: [
-            { size: "Cheese & Onion", price: "£4.00" }
+          name: "Pies Menu",
+          description: "All our homemade pies",
+          isTable: true,
+          fishItems: [
+            { name: "Steak & Kidney Pie", medium: "£4.50", large: "-" },
+            { name: "Chicken & Mushroom Pie", medium: "£4.50", large: "-" },
+            { name: "Beef & Onion Pie", medium: "£4.50", large: "-" },
+            { name: "Cheese & Onion Pie", medium: "£4.00", large: "-" }
           ]
         }
       ]
@@ -102,7 +86,7 @@ export default function MenuSection() {
           </h4>
           <div className="bg-white/10 rounded-xl p-6">
             <div className="grid grid-cols-3 gap-4 mb-4">
-              <div className="font-bold text-golden text-center">Fish</div>
+              <div className="font-bold text-golden text-center">Item</div>
               <div className="font-bold text-golden text-center">Medium</div>
               <div className="font-bold text-golden text-center">Large</div>
             </div>
