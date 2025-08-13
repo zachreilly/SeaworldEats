@@ -150,14 +150,19 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Map placeholder */}
+            {/* Google Maps */}
             <div className="bg-white rounded-xl shadow-lg p-4">
-              <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <i className="fas fa-map text-4xl mb-2"></i>
-                  <div>Google Maps Integration</div>
-                  <div className="text-sm">152 Watford Rd, Croxley Green</div>
-                </div>
+              <div className="aspect-video rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2464.123456789!2d-0.443553!3d51.64684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s152+Watford+Road%2C+Croxley+Green%2C+Rickmansworth+WD3+3BZ%2C+UK!5e0!3m2!1sen!2s!4v1608123456789"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Seaworld Fish Bar Location - 152 Watford Road, Croxley Green"
+                ></iframe>
               </div>
             </div>
           </div>
