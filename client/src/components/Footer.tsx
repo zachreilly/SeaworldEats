@@ -21,14 +21,14 @@ export default function Footer() {
             <div className="mb-4">
               <h3 className="text-xl font-bold">Seaworld Fish Bar</h3>
             </div>
-            <p className="text-gray-300 mb-4">
+            <p className="text-black mb-4">
               Serving the finest fish & chips, kebabs and homemade pies in Croxley Green since day one.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-golden transition-colors">
+              <a href="#" className="text-black hover:text-golden transition-colors">
                 <i className="fab fa-facebook text-xl"></i>
               </a>
-              <a href="#" className="text-gray-300 hover:text-golden transition-colors">
+              <a href="#" className="text-black hover:text-golden transition-colors">
                 <i className="fab fa-instagram text-xl"></i>
               </a>
             </div>
@@ -36,7 +36,7 @@ export default function Footer() {
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-gray-300">
+            <ul className="space-y-2 text-black">
               <li>
                 <button onClick={scrollToMenu} className="hover:text-golden transition-colors">
                   Our Menu

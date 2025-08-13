@@ -4,8 +4,8 @@ export default function ContactSection() {
     <section id="contact" className="py-16 bg-light-blue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Find Us</h2>
-          <p className="text-xl text-gray-600">Visit us for the best fish & chips in Croxley Green</p>
+          <h2 className="text-4xl font-bold text-white mb-4">Find Us</h2>
+          <p className="text-xl text-black">Visit us for the best fish & chips in Croxley Green</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -18,14 +18,14 @@ export default function ContactSection() {
                   <i className="fas fa-map-marker-alt text-white text-xl mt-1"></i>
                   <div>
                     <div className="font-semibold text-white">Address</div>
-                    <div className="text-gray-300">152 Watford Rd, Croxley Green, WD3 3BZ</div>
+                    <div className="text-black">152 Watford Rd, Croxley Green, WD3 3BZ</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
                   <i className="fas fa-phone text-ocean-blue text-xl mt-1"></i>
                   <div>
-                    <div className="font-semibold text-gray-800">Phone</div>
-                    <div className="text-gray-600">01923 710019</div>
+                    <div className="font-semibold text-white">Phone</div>
+                    <div className="text-black">01923 710019</div>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
