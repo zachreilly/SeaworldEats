@@ -1,27 +1,6 @@
 export default function MenuSection() {
   const menuCategories = [
     {
-      title: "SENIORS FISH & CHIPS MEAL",
-      description: "Special discounted meals for our senior customers, featuring smaller portions at great value prices.",
-      subcategories: [
-        {
-          name: "Lunch Meal Deals",
-          description: "All meals include curry sauce or mushy peas & cans",
-          isTable: true,
-          isSeniors: true,
-          fishItems: [
-            { name: "Cod & Chips", medium: "£9.50", large: "-" },
-            { name: "Sausage & Chips", medium: "£8.00", large: "-" },
-            { name: "Fish Cake & Chips", medium: "£6.50", large: "-" },
-            { name: "Chicken Nugget (8 pcs) & Chips", medium: "£8.00", large: "-" },
-            { name: "Quarter Chicken & Chips", medium: "£8.00", large: "-" },
-            { name: "Cheesy Chips", medium: "£6.50", large: "-" },
-            { name: "Fish Fingers (6 pcs) & Chips", medium: "£7.00", large: "-" }
-          ]
-        }
-      ]
-    },
-    {
       title: "FISH",
       description: "Fresh fish fillets in our signature crispy batter, served with your choice of chips and traditional sides.",
       subcategories: [
@@ -193,6 +172,27 @@ export default function MenuSection() {
             { name: "Big Bottle Drinks", medium: "£2.50", large: "-" },
             { name: "Bottle Ketchup", medium: "£2.20", large: "-" },
             { name: "Bottle Vinegar", medium: "£2.20", large: "-" }
+          ]
+        }
+      ]
+    },
+    {
+      title: "SENIORS FISH & CHIPS MEAL",
+      description: "Special discounted meals for our senior customers, featuring smaller portions at great value prices.",
+      subcategories: [
+        {
+          name: "Lunch Meal Deals",
+          description: "All meals include curry sauce or mushy peas & cans",
+          isTable: true,
+          isSeniors: true,
+          fishItems: [
+            { name: "Cod & Chips with Peas or Curry Sauce", medium: "£9.50", large: "-" },
+            { name: "Sausage & Chips with Curry Sauce or Mushy Peas", medium: "£8.00", large: "-" },
+            { name: "Fish Cake & Chips with Curry Sauce or Mushy Peas", medium: "£6.50", large: "-" },
+            { name: "Chicken Nugget (8 pcs) & Chips with Curry Sauce or Mushy Peas", medium: "£8.00", large: "-" },
+            { name: "Quarter Chicken & Chips with Curry Sauce or Mushy Peas", medium: "£8.00", large: "-" },
+            { name: "Cheesy Chips with Curry Sauce or Mushy Peas", medium: "£6.50", large: "-" },
+            { name: "Fish Fingers (6 pcs) & Chips with Curry Sauce or Mushy Peas", medium: "£7.00", large: "-" }
           ]
         }
       ]

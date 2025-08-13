@@ -4,7 +4,7 @@ import pandas as pd
 def read_excel_menu():
     try:
         # Read the Excel file
-        excel_file = "attached_assets/Book (1)_1755120055538.xlsx"
+        excel_file = "attached_assets/Book (1)_1755120219396.xlsx"
         
         # Try to read all sheets
         xl = pd.ExcelFile(excel_file)
