@@ -5,34 +5,19 @@ export default function MenuSection() {
       description: "Fresh fish fillets in our signature crispy batter, served with your choice of chips and traditional sides.",
       subcategories: [
         {
-          name: "Cod",
-          description: "Premium cod fillet",
-          options: [
-            { size: "Large", price: "£8.50" },
-            { size: "Regular", price: "£6.50" }
-          ]
-        },
-        {
-          name: "Haddock", 
-          description: "Fresh haddock fillet",
-          options: [
-            { size: "Large", price: "£8.50" },
-            { size: "Regular", price: "£6.50" }
-          ]
-        },
-        {
-          name: "Plaice",
-          description: "Delicate plaice fillet", 
-          options: [
-            { size: "Large", price: "£7.50" },
-            { size: "Regular", price: "£5.50" }
-          ]
-        },
-        {
-          name: "Rock",
-          description: "Fresh rock fish", 
-          options: [
-            { size: "Large", price: "£8.60" }
+          name: "Fish Menu",
+          description: "All our fresh fish options",
+          isTable: true,
+          fishItems: [
+            { name: "Cod", medium: "£6.50", large: "£8.50" },
+            { name: "Haddock", medium: "£6.50", large: "£8.50" },
+            { name: "Plaice", medium: "£5.50", large: "£7.50" },
+            { name: "Rock", medium: "£8.60", large: "-" },
+            { name: "OAP", medium: "£8.50", large: "-" },
+            { name: "Scampi (10 pieces)", medium: "£8.40", large: "-" },
+            { name: "Cod Bites (6 pieces)", medium: "£6.50", large: "-" },
+            { name: "Fish Cake", medium: "£2.40", large: "-" },
+            { name: "Cod Roe", medium: "£3.00", large: "-" }
           ]
         }
       ]
@@ -108,26 +93,52 @@ export default function MenuSection() {
     }
   ];
 
-  const SubcategoryBubble = ({ subcategory }: { subcategory: any }) => (
-    <div className="relative group">
-      <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 p-8 min-h-[200px] flex flex-col justify-center items-center text-center border-4 border-golden">
-        <h4 className="font-bold text-white text-xl mb-3 leading-tight">
-          {subcategory.name}
-        </h4>
-        {subcategory.description && (
-          <p className="text-blue-100 text-sm mb-4 leading-snug">{subcategory.description}</p>
-        )}
-        <div className="space-y-2">
-          {subcategory.options.map((option: any, index: number) => (
-            <div key={index} className="flex justify-between items-center bg-white/10 rounded-full px-3 py-1 min-w-[160px]">
-              <span className="text-white text-sm font-medium">{option.size}</span>
-              <span className="text-golden font-bold text-sm">{option.price}</span>
+  const SubcategoryBubble = ({ subcategory }: { subcategory: any }) => {
+    if (subcategory.isTable) {
+      return (
+        <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl shadow-lg p-8 border-4 border-golden">
+          <h4 className="font-bold text-white text-2xl mb-6 text-center">
+            {subcategory.name}
+          </h4>
+          <div className="bg-white/10 rounded-xl p-6">
+            <div className="grid grid-cols-3 gap-4 mb-4">
+              <div className="font-bold text-golden text-center">Fish</div>
+              <div className="font-bold text-golden text-center">Medium</div>
+              <div className="font-bold text-golden text-center">Large</div>
             </div>
-          ))}
+            {subcategory.fishItems.map((fish: any, index: number) => (
+              <div key={index} className="grid grid-cols-3 gap-4 py-2 border-b border-white/20 last:border-b-0">
+                <div className="text-white text-sm font-medium">{fish.name}</div>
+                <div className="text-white text-sm text-center">{fish.medium}</div>
+                <div className="text-white text-sm text-center">{fish.large}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
+
+    return (
+      <div className="relative group">
+        <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 p-8 min-h-[200px] flex flex-col justify-center items-center text-center border-4 border-golden">
+          <h4 className="font-bold text-white text-xl mb-3 leading-tight">
+            {subcategory.name}
+          </h4>
+          {subcategory.description && (
+            <p className="text-blue-100 text-sm mb-4 leading-snug">{subcategory.description}</p>
+          )}
+          <div className="space-y-2">
+            {subcategory.options?.map((option: any, index: number) => (
+              <div key={index} className="flex justify-between items-center bg-white/10 rounded-full px-3 py-1 min-w-[160px]">
+                <span className="text-white text-sm font-medium">{option.size}</span>
+                <span className="text-golden font-bold text-sm">{option.price}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   const AlternatingCategory = ({ category, isReversed }: { category: any; isReversed: boolean }) => (
     <div className={`mb-16 grid lg:grid-cols-2 gap-12 items-center ${isReversed ? 'lg:text-right' : ''}`}>
@@ -142,7 +153,7 @@ export default function MenuSection() {
         </p>
       </div>
       <div className={`${isReversed ? 'lg:order-1' : 'lg:order-2'}`}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className={`${category.subcategories[0]?.isTable ? 'flex justify-center' : 'grid grid-cols-1 sm:grid-cols-2 gap-6'}`}>
           {category.subcategories.map((subcategory: any, index: number) => (
             <SubcategoryBubble key={index} subcategory={subcategory} />
           ))}
