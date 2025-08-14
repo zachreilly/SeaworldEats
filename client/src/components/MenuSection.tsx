@@ -134,6 +134,25 @@ export default function MenuSection() {
       ]
     },
     {
+      title: "VEGETARIAN",
+      description: "Delicious plant-based options including fresh falafel, creamy halloumi, and nutritious salads for vegetarian diners.",
+      subcategories: [
+        {
+          name: "Vegetarian Menu",
+          description: "Plant-based meal options",
+          isTable: true,
+          fishItems: [
+            { name: "Falafel Kebab", medium: "£6.90", large: "-" },
+            { name: "Halloumi Kebab", medium: "£6.90", large: "-" },
+            { name: "Hummus in Pitta", medium: "£5.30", large: "-" },
+            { name: "Salad in Pitta Bread", medium: "£4.30", large: "-" },
+            { name: "Vegetarian Burger", medium: "£4.80", large: "-" },
+            { name: "Chips in Pitta Bread", medium: "£4.00", large: "-" }
+          ]
+        }
+      ]
+    },
+    {
       title: "WRAPS",
       description: "Fresh wraps with tender meats, crispy vegetables, and authentic Mediterranean flavors wrapped in soft tortillas.",
       subcategories: [
