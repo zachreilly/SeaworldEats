@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react";
-import img1 from "@assets/IMG_3394_1755125019932.jpeg";
-import img2 from "@assets/2fe1fa0f-bc7c-4e07-825e-89d0a8687297_1755125019932.jpeg";
-import img3 from "@assets/IMG_3386_1755125019932.jpeg";
-import img4 from "@assets/IMG_3390_1755125019932.jpeg";
-import img5 from "@assets/IMG_3387_1755125033144.jpeg";
-import img6 from "@assets/IMG_3391_1755125033144.jpeg";
-import img7 from "@assets/IMG_3393_1755125033145.jpeg";
+import img1 from "@assets/IMG_3410_1755189680694.jpeg";
+import img2 from "@assets/IMG_3411_1755189680694.jpeg";
+import img3 from "@assets/IMG_3412_1755189680694.jpeg";
+import img4 from "@assets/IMG_3413_1755189680694.jpeg";
+import img5 from "@assets/IMG_3414_1755189680692.jpeg";
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,9 +13,7 @@ export default function Hero() {
     img2,
     img3,
     img4,
-    img5,
-    img6,
-    img7
+    img5
   ];
 
   useEffect(() => {
