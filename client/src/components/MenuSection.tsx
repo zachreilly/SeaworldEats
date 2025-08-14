@@ -71,7 +71,7 @@ export default function MenuSection() {
     },
     {
       title: "PIES & SAUSAGES",
-      description: "Homemade traditional British pies with flaky pastry and hearty fillings, plus premium sausages, all baked fresh daily.",
+      description: "Traditional British pies with flaky pastry and hearty fillings, plus premium sausages, all baked fresh daily.",
       subcategories: [
         {
           name: "Pies & Sausages Menu",
