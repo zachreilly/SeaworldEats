@@ -59,6 +59,11 @@ export default function MenuSection() {
             { name: "Lamb Shish Kebab", medium: "£9.20", large: "£12.90", extra: "£14.90" },
             { name: "Lamb Kofte Kebab", medium: "£9.20", large: "£12.90", extra: "£14.90" },
             { name: "Chicken Shish Kebab", medium: "£9.20", large: "£12.90", extra: "£14.90" },
+            { name: "Lamb Doner & Lamb Shish", medium: "-", large: "-", extra: "£13.90" },
+            { name: "Lamb Shish & Lamb Kofte", medium: "-", large: "-", extra: "£13.90" },
+            { name: "Lamb Kofte & Lamb Doner", medium: "-", large: "-", extra: "£13.90" },
+            { name: "Lamb Doner & Chicken Shish", medium: "-", large: "-", extra: "£13.90" },
+            { name: "Mixed Kebab (all meats)", medium: "-", large: "-", extra: "£22.90" },
             { name: "Doner Meat and Chips", medium: "£8.20", large: "£10.20", extra: "-" },
             { name: "Box Doner Meat", medium: "£5.00", large: "-", extra: "-" }
           ]
