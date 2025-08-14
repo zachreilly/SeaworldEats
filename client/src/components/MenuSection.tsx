@@ -71,18 +71,31 @@ export default function MenuSection() {
       ]
     },
     {
-      title: "PIES & SAUSAGES",
-      description: "Traditional British pies with flaky pastry and hearty fillings, plus premium sausages, all baked fresh daily.",
+      title: "PIES",
+      description: "Traditional British pies with flaky pastry and hearty fillings, baked fresh daily with authentic recipes.",
       subcategories: [
         {
-          name: "Pies & Sausages Menu",
-          description: "Traditional pies and sausages",
+          name: "Pies Menu",
+          description: "Traditional pie options",
           isTable: true,
           fishItems: [
             { name: "Steak & Kidney Pie", medium: "£4.10", large: "-" },
             { name: "Chicken & Mushroom Pie", medium: "£4.10", large: "-" },
             { name: "Beef & Onion Pie", medium: "£4.10", large: "-" },
-            { name: "Pancake Roll", medium: "£2.40", large: "-" },
+            { name: "Pancake Roll", medium: "£2.40", large: "-" }
+          ]
+        }
+      ]
+    },
+    {
+      title: "SAUSAGES",
+      description: "Premium quality sausages including traditional and specialty varieties, served hot and fresh.",
+      subcategories: [
+        {
+          name: "Sausages Menu",
+          description: "All our sausage options",
+          isTable: true,
+          fishItems: [
             { name: "Sausage", medium: "£2.40", large: "-" },
             { name: "Jumbo Sausage", medium: "£2.40", large: "-" },
             { name: "Jumbo Saveloy", medium: "£2.40", large: "-" },
