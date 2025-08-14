@@ -119,8 +119,7 @@ export default function MenuSection() {
             { name: "Cheese Burger", medium: "£4.80", large: "£6.60" },
             { name: "Chicken Burger", medium: "£4.80", large: "-" },
             { name: "Chicken Sandwich", medium: "£6.30", large: "-" },
-            { name: "Fish Fillet Burger", medium: "£5.50", large: "-" },
-            { name: "Vegetarian Burger", medium: "£4.80", large: "-" }
+            { name: "Fish Fillet Burger", medium: "£5.50", large: "-" }
           ]
         }
       ]
