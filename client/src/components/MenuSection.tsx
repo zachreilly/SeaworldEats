@@ -222,10 +222,10 @@ export default function MenuSection() {
     },
     {
       title: "SENIORS FISH & CHIPS MEAL",
-      description: "Special discounted meals for our senior customers, featuring smaller portions at great value prices. £8.50",
+      description: "Special discounted meals for our senior customers, featuring smaller portions at great value prices.",
       subcategories: [
         {
-          name: "Senior Fish & Chips Menu",
+          name: "Lunch Meal Deals",
           description: "All meals include curry sauce or mushy peas & cans",
           isTable: true,
           isSeniors: true,
@@ -363,6 +363,11 @@ export default function MenuSection() {
             {category.title}
           </span>
         </h2>
+        {category.title === "SENIORS FISH & CHIPS MEAL" && (
+          <div className="text-4xl font-bold text-golden mb-4 text-center lg:text-left">
+            £8.50
+          </div>
+        )}
         <p className="text-xl text-blue-100 leading-relaxed">
           {category.description}
         </p>
