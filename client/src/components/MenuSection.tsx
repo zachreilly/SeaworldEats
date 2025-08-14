@@ -220,7 +220,7 @@ export default function MenuSection() {
           isSeniors: true,
           fishItems: [
             { name: "Cod & Chips with Peas or Curry Sauce", medium: "£9.50", large: "-" },
-            { name: "Sausage & Chips with Curry Sauce or Mushy Peas", medium: "£8.00", large: "-" },
+            { name: "Sausage & Chips with Curry Sauce or Mushy Peas", medium: "£6.50", large: "-" },
             { name: "Fish Cake & Chips with Curry Sauce or Mushy Peas", medium: "£6.50", large: "-" },
             { name: "Chicken Nugget (8 pcs) & Chips with Curry Sauce or Mushy Peas", medium: "£8.00", large: "-" },
             { name: "Quarter Chicken & Chips with Curry Sauce or Mushy Peas", medium: "£8.00", large: "-" },
