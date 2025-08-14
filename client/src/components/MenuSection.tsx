@@ -129,12 +129,12 @@ export default function MenuSection() {
       ]
     },
     {
-      title: "WRAPS & KIDS MEALS",
-      description: "Fresh wraps with tender meats and crispy vegetables, plus specially portioned kids meals with their favorite items.",
+      title: "WRAPS",
+      description: "Fresh wraps with tender meats, crispy vegetables, and authentic Mediterranean flavors wrapped in soft tortillas.",
       subcategories: [
         {
-          name: "Wraps & Kids Menu",
-          description: "Wraps and kids meal options",
+          name: "Wraps Menu",
+          description: "All our wrap options",
           isTable: true,
           fishItems: [
             { name: "Doner Kebab Wrap", medium: "£8.20", large: "-" },
@@ -142,7 +142,20 @@ export default function MenuSection() {
             { name: "Lamb Shish Wrap", medium: "£9.20", large: "-" },
             { name: "Chicken Shish Wrap", medium: "£9.20", large: "-" },
             { name: "Falafel Wrap", medium: "£6.90", large: "-" },
-            { name: "Halloumi Wrap", medium: "£6.90", large: "-" },
+            { name: "Halloumi Wrap", medium: "£6.90", large: "-" }
+          ]
+        }
+      ]
+    },
+    {
+      title: "KIDS MEALS",
+      description: "Specially portioned meals for children, featuring their favorite items served with chips at great value prices.",
+      subcategories: [
+        {
+          name: "Kids Menu",
+          description: "Child-friendly meal options",
+          isTable: true,
+          fishItems: [
             { name: "Fishcake & Chips", medium: "£5.00", large: "-" },
             { name: "Chicken Nugget & Chips (4pcs)", medium: "£5.00", large: "-" },
             { name: "Sausage & Chips", medium: "£5.00", large: "-" },
