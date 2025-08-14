@@ -222,11 +222,11 @@ export default function MenuSection() {
     },
     {
       title: "SENIORS FISH & CHIPS MEAL",
-      description: "Special discounted meals for our senior customers, featuring smaller portions at great value prices.",
+      description: "Special discounted meals for our senior customers, featuring smaller portions at great value prices. £8.50",
       subcategories: [
         {
-          name: "Lunch Meal Deals - ALL £8.50",
-          description: "All meals include curry sauce or mushy peas & cans - Special Deal Price £8.50",
+          name: "Senior Fish & Chips Menu",
+          description: "All meals include curry sauce or mushy peas & cans",
           isTable: true,
           isSeniors: true,
           fishItems: [
