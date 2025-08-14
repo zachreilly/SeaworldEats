@@ -102,7 +102,7 @@ export default function MenuSection() {
           isTable: true,
           fishItems: [
             { name: "Chicken Quarter", medium: "£4.50", large: "-" },
-            { name: "Chicken Half", medium: "£7.50", large: "-" },
+            { name: "Chicken Half", medium: "£7.10", large: "-" },
             { name: "Chicken Nuggets (6pcs)", medium: "£4.50", large: "-" },
             { name: "Beef Burger", medium: "£4.60", large: "£6.20" },
             { name: "Cheese Burger", medium: "£4.80", large: "£6.60" },
