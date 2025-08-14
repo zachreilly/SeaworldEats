@@ -32,7 +32,9 @@ export default function MenuSection() {
           isTable: true,
           isChips: true,
           fishItems: [
-            { name: "Chips", medium: "£2.50", large: "£3.50" },
+            { name: "Chips", medium: "£3.20", large: "£4.40" },
+            { name: "Chip Butty", medium: "£3.50", large: "-" },
+            { name: "Cheesy Bits", medium: "£5.00", large: "-" },
             { name: "Mushy Peas", medium: "£1.90", large: "-" },
             { name: "Curry Sauce", medium: "£1.90", large: "-" },
             { name: "Gravy", medium: "£1.90", large: "-" },
