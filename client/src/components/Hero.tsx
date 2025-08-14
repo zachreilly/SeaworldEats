@@ -45,16 +45,22 @@ export default function Hero() {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+            className={`absolute inset-0 transition-opacity duration-1000 ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
-            style={{ backgroundImage: `url('${image}')` }}
+            style={{ 
+              backgroundImage: `url('${image}')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              imageRendering: 'crisp-edges'
+            }}
           />
         ))}
       </div>
       
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      {/* Lighter Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       
       {/* Content */}
       <div className="relative h-full flex items-center">
