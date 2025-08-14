@@ -43,18 +43,18 @@ export default function Hero() {
       {/* Slideshow Background */}
       <div className="absolute inset-0">
         {images.map((image, index) => (
-          <div
+          <img
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
+            src={image}
+            alt={`Seaworld Fish Bar - Image ${index + 1}`}
+            className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-1000 ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
             style={{ 
-              backgroundImage: `url('${image}')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              imageRendering: 'crisp-edges'
+              imageRendering: 'crisp-edges',
+              filter: 'contrast(1.05) saturate(1.1)'
             }}
+            loading={index === 0 ? 'eager' : 'lazy'}
           />
         ))}
       </div>
