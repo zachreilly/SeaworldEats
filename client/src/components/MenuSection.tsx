@@ -225,7 +225,9 @@ export default function MenuSection() {
             { name: "Chicken Nugget (8 pcs) & Chips with Curry Sauce or Mushy Peas", medium: "£8.00", large: "-" },
             { name: "Quarter Chicken & Chips with Curry Sauce or Mushy Peas", medium: "£8.00", large: "-" },
             { name: "Cheesy Chips with Curry Sauce or Mushy Peas", medium: "£6.50", large: "-" },
-            { name: "Fish Fingers (6 pcs) & Chips with Curry Sauce or Mushy Peas", medium: "£7.00", large: "-" }
+            { name: "Fish Fingers (6 pcs) & Chips with Curry Sauce or Mushy Peas", medium: "£7.00", large: "-" },
+            { name: "Pie & Chips with Curry Sauce or Mushy Peas", medium: "£8.50", large: "-" },
+            { name: "Burger & Chips with Curry Sauce or Mushy Peas", medium: "£7.50", large: "-" }
           ]
         }
       ]
