@@ -55,18 +55,12 @@ export default function MenuSection() {
           description: "All our kebab options",
           isTable: true,
           fishItems: [
-            { name: "Chicken Doner", medium: "£8.50", large: "-" },
-            { name: "Lamb Doner", medium: "£8.50", large: "-" },
-            { name: "Mixed Doner", medium: "£9.00", large: "-" },
-            { name: "Chicken Shish", medium: "£9.50", large: "-" },
-            { name: "Lamb Shish", medium: "£10.50", large: "-" },
-            { name: "Mixed Shish", medium: "£11.00", large: "-" },
-            { name: "Lamb Kofte", medium: "£10.50", large: "-" },
-            { name: "Mixed Kebab", medium: "£13.90", large: "-" },
-            { name: "Halloumi Kebab", medium: "£6.90", large: "-" },
-            { name: "Hummus in Pitta", medium: "£5.30", large: "-" },
-            { name: "Salad in Pitta Bread", medium: "£4.30", large: "-" },
-            { name: "Chips in Pitta Bread", medium: "£4.00", large: "-" }
+            { name: "Lamb Doner Kebab", medium: "£8.20", large: "£10.20", extra: "£12.20" },
+            { name: "Lamb Shish Kebab", medium: "£9.20", large: "£12.90", extra: "£14.90" },
+            { name: "Lamb Kofte Kebab", medium: "£9.20", large: "£12.90", extra: "£14.90" },
+            { name: "Chicken Shish Kebab", medium: "£9.20", large: "£12.90", extra: "£14.90" },
+            { name: "Doner Meat and Chips", medium: "£8.20", large: "£10.20", extra: "-" },
+            { name: "Box Doner Meat", medium: "£5.00", large: "-", extra: "-" }
           ]
         }
       ]
@@ -205,6 +199,8 @@ export default function MenuSection() {
     if (subcategory.isTable) {
       // Check if any item has a large size (not "-")
       const hasLargeSizes = subcategory.fishItems.some((item: any) => item.large && item.large !== "-");
+      // Check if any item has an extra size (for kebabs)
+      const hasExtraSizes = subcategory.fishItems.some((item: any) => item.extra && item.extra !== "-");
       
       return (
         <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl shadow-lg p-8 border-4 border-golden relative overflow-hidden">
@@ -240,18 +236,39 @@ export default function MenuSection() {
             {subcategory.name}
           </h4>
           <div className="bg-white/10 rounded-xl p-6">
-            <div className={`grid ${hasLargeSizes ? 'grid-cols-3' : 'grid-cols-2'} gap-4 mb-4`}>
-              <div className="font-bold text-golden text-center">Item</div>
-              <div className="font-bold text-golden text-center">{hasLargeSizes ? 'Medium' : 'Price'}</div>
-              {hasLargeSizes && <div className="font-bold text-golden text-center">Large</div>}
-            </div>
-            {subcategory.fishItems.map((fish: any, index: number) => (
-              <div key={index} className={`grid ${hasLargeSizes ? 'grid-cols-3' : 'grid-cols-2'} gap-4 py-2 border-b border-white/20 last:border-b-0`}>
-                <div className="text-white text-sm font-medium">{fish.name}</div>
-                <div className="text-white text-sm text-center">{fish.medium}</div>
-                {hasLargeSizes && <div className="text-white text-sm text-center">{fish.large}</div>}
-              </div>
-            ))}
+            {hasExtraSizes ? (
+              <>
+                <div className="grid grid-cols-4 gap-4 mb-4">
+                  <div className="font-bold text-golden text-center">Item</div>
+                  <div className="font-bold text-golden text-center">Small</div>
+                  <div className="font-bold text-golden text-center">Medium</div>
+                  <div className="font-bold text-golden text-center">Large</div>
+                </div>
+                {subcategory.fishItems.map((fish: any, index: number) => (
+                  <div key={index} className="grid grid-cols-4 gap-4 py-2 border-b border-white/20 last:border-b-0">
+                    <div className="text-white text-sm font-medium">{fish.name}</div>
+                    <div className="text-white text-sm text-center">{fish.medium}</div>
+                    <div className="text-white text-sm text-center">{fish.large !== "-" ? fish.large : "-"}</div>
+                    <div className="text-white text-sm text-center">{fish.extra !== "-" ? fish.extra : "-"}</div>
+                  </div>
+                ))}
+              </>
+            ) : (
+              <>
+                <div className={`grid ${hasLargeSizes ? 'grid-cols-3' : 'grid-cols-2'} gap-4 mb-4`}>
+                  <div className="font-bold text-golden text-center">Item</div>
+                  <div className="font-bold text-golden text-center">{hasLargeSizes ? 'Medium' : 'Price'}</div>
+                  {hasLargeSizes && <div className="font-bold text-golden text-center">Large</div>}
+                </div>
+                {subcategory.fishItems.map((fish: any, index: number) => (
+                  <div key={index} className={`grid ${hasLargeSizes ? 'grid-cols-3' : 'grid-cols-2'} gap-4 py-2 border-b border-white/20 last:border-b-0`}>
+                    <div className="text-white text-sm font-medium">{fish.name}</div>
+                    <div className="text-white text-sm text-center">{fish.medium}</div>
+                    {hasLargeSizes && <div className="text-white text-sm text-center">{fish.large}</div>}
+                  </div>
+                ))}
+              </>
+            )}
           </div>
           {subcategory.isSeniors && (
             <div className="mt-4 text-center">
