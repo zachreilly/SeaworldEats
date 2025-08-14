@@ -214,18 +214,18 @@ export default function MenuSection() {
       description: "Special discounted meals for our senior customers, featuring smaller portions at great value prices.",
       subcategories: [
         {
-          name: "Lunch Meal Deals",
-          description: "All meals include curry sauce or mushy peas & cans",
+          name: "Lunch Meal Deals - ALL £8.50",
+          description: "All meals include curry sauce or mushy peas & cans - Special Deal Price £8.50",
           isTable: true,
           isSeniors: true,
           fishItems: [
-            { name: "Cod & Chips with Peas or Curry Sauce", medium: "£9.50", large: "-" },
-            { name: "Sausage & Chips with Curry Sauce or Mushy Peas", medium: "£8.00", large: "-" },
-            { name: "Fish Cake & Chips with Curry Sauce or Mushy Peas", medium: "£6.50", large: "-" },
-            { name: "Chicken Nugget (8 pcs) & Chips with Curry Sauce or Mushy Peas", medium: "£8.00", large: "-" },
-            { name: "Quarter Chicken & Chips with Curry Sauce or Mushy Peas", medium: "£8.00", large: "-" },
-            { name: "Cheesy Chips with Curry Sauce or Mushy Peas", medium: "£6.50", large: "-" },
-            { name: "Fish Fingers (6 pcs) & Chips with Curry Sauce or Mushy Peas", medium: "£7.00", large: "-" }
+            { name: "Cod & Chips with Peas or Curry Sauce", medium: "£8.50", large: "-" },
+            { name: "Sausage & Chips with Curry Sauce or Mushy Peas", medium: "£8.50", large: "-" },
+            { name: "Fish Cake & Chips with Curry Sauce or Mushy Peas", medium: "£8.50", large: "-" },
+            { name: "Chicken Nugget (8 pcs) & Chips with Curry Sauce or Mushy Peas", medium: "£8.50", large: "-" },
+            { name: "Quarter Chicken & Chips with Curry Sauce or Mushy Peas", medium: "£8.50", large: "-" },
+            { name: "Cheesy Chips with Curry Sauce or Mushy Peas", medium: "£8.50", large: "-" },
+            { name: "Fish Fingers (6 pcs) & Chips with Curry Sauce or Mushy Peas", medium: "£8.50", large: "-" }
           ]
         }
       ]
