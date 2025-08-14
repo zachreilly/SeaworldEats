@@ -96,7 +96,6 @@ export default function MenuSection() {
           description: "All our sausage options",
           isTable: true,
           fishItems: [
-            { name: "Sausage", medium: "£2.40", large: "-" },
             { name: "Jumbo Sausage", medium: "£2.40", large: "-" },
             { name: "Jumbo Saveloy", medium: "£2.40", large: "-" },
             { name: "Jumbo Battered Sausage", medium: "£2.60", large: "-" }
