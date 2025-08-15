@@ -48,7 +48,7 @@ export default function MenuSection() {
     },
     {
       title: "KEBABS", 
-      description: "Authentic Mediterranean flavors with tender meats and fresh ingredients, served in warm pita or with chips.",
+      description: "Authentic Mediterranean flavors with tender meats and fresh ingredients, served in warm pita.",
       subcategories: [
         {
           name: "Kebabs Menu",
@@ -72,7 +72,7 @@ export default function MenuSection() {
     },
     {
       title: "PIES",
-      description: "Traditional British pies with flaky pastry and hearty fillings, baked fresh daily with authentic recipes.",
+      description: "Traditional British pies with flaky pastry and hearty fillings, made with authentic recipes.",
       subcategories: [
         {
           name: "Pies Menu",
